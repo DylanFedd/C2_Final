@@ -1,0 +1,53 @@
+﻿{
+   "CodeGenerationMode": 3,
+   "ContextClassName": "C2_FinalContext",
+   "ContextNamespace": null,
+   "DefaultDacpacSchema": null,
+   "FilterSchemas": false,
+   "IncludeConnectionString": false,
+   "ModelNamespace": null,
+   "OutputContextPath": null,
+   "OutputPath": "Models",
+   "PreserveCasingWithRegex": true,
+   "ProjectRootNamespace": "C2_Final",
+   "Schemas": null,
+   "SelectedHandlebarsLanguage": 0,
+   "SelectedToBeGenerated": 0,
+   "Tables": [
+      {
+         "Name": "[dbo].[Drivers]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Infractions]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[login]",
+         "ObjectType": 0
+      },
+      {
+         "Name": "[dbo].[Vehicles]",
+         "ObjectType": 0
+      }
+   ],
+   "UiHint": "dylanpc.C2_Final.dbo",
+   "UncountableWords": null,
+   "UseBoolPropertiesWithoutDefaultSql": false,
+   "UseDatabaseNames": false,
+   "UseDateOnlyTimeOnly": false,
+   "UseDbContextSplitting": false,
+   "UseFluentApiOnly": true,
+   "UseHandleBars": false,
+   "UseHierarchyId": false,
+   "UseInflector": true,
+   "UseLegacyPluralizer": false,
+   "UseManyToManyEntity": false,
+   "UseNoDefaultConstructor": false,
+   "UseNoObjectFilter": false,
+   "UseNodaTime": false,
+   "UseNullableReferences": false,
+   "UseSchemaFolders": false,
+   "UseSpatial": false,
+   "UseT4": false
+}
