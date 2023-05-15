@@ -15,5 +15,7 @@ public partial class Driver
 
     public string Ssn { get; set; }
 
+    public string DriverBday { get; set; }
+
     public virtual ICollection<Infraction> Infractions { get; set; } = new List<Infraction>();
 }

@@ -28,6 +28,10 @@ public partial class C2_FinalContext : DbContext
             entity.HasKey(e => e.DriversLicenseNumber);
 
             entity.Property(e => e.DriversLicenseNumber).ValueGeneratedNever();
+            entity.Property(e => e.DriverBday)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("DriverBDay");
             entity.Property(e => e.DriverFname)
                 .IsRequired()
                 .HasMaxLength(50)
@@ -56,6 +60,9 @@ public partial class C2_FinalContext : DbContext
                 .IsRequired()
                 .HasMaxLength(50)
                 .IsUnicode(false);
+            entity.Property(e => e.VehiclesYear)
+                .HasMaxLength(10)
+                .IsFixedLength();
 
             entity.HasOne(d => d.DriversLicenseNumberNavigation).WithMany(p => p.Infractions)
                 .HasForeignKey(d => d.DriversLicenseNumber)
@@ -99,6 +106,15 @@ public partial class C2_FinalContext : DbContext
             entity.Property(e => e.LicensePlateNumber).ValueGeneratedNever();
             entity.Property(e => e.VehiclesName)
                 .IsRequired()
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.VehiclesYear)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Vehiclescolor)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.Vehiclesmodal)
                 .HasMaxLength(50)
                 .IsUnicode(false);
         });

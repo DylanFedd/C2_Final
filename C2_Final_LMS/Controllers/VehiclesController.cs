@@ -24,24 +24,24 @@ namespace C2_Final.Controllers
         }
 
         // GET: api/Vehicles
-        /*[HttpGet]
+/*        [HttpGet]
         public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
         {
-          if (_context.Vehicles == null)
-          {
-              return NotFound();
-          }
+            if (_context.Vehicles == null)
+            {
+                return NotFound();
+            }
             return await _context.Vehicles.ToListAsync();
-        }*/
+        }
 
         // GET: api/Vehicles/5
-        /*[HttpGet("{id}")]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Vehicle>> GetVehicle(int id)
         {
-          if (_context.Vehicles == null)
-          {
-              return NotFound();
-          }
+            if (_context.Vehicles == null)
+            {
+                return NotFound();
+            }
             var vehicle = await _context.Vehicles.FindAsync(id);
 
             if (vehicle == null)
@@ -53,7 +53,7 @@ namespace C2_Final.Controllers
         }*/
 
         // GET: GetVehicleByLPN
-        [HttpGet()]
+        [HttpGet]
         public async Task<ActionResult<Vehicle>> GetVehicleByLPN([FromQuery] VehicleLPN lookup)
         {
             if (_context.Vehicles == null)
@@ -103,7 +103,7 @@ namespace C2_Final.Controllers
 
         // POST: api/Vehicles
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        [HttpPost]
+        [HttpPost(Name = "GetVehicle")]
         public async Task<ActionResult<Vehicle>> PostVehicle(Vehicle vehicle)
         {
           if (_context.Vehicles == null)
@@ -127,7 +127,7 @@ namespace C2_Final.Controllers
                 }
             }
 
-            return CreatedAtAction("GetVehicle", new { id = vehicle.LicensePlateNumber }, vehicle);
+            return Created("GetVehicle", vehicle);
         }
 
         // DELETE: api/Vehicles/5

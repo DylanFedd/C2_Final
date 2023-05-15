@@ -15,6 +15,8 @@ public partial class Infraction
 
     public int LicensePlateNumber { get; set; }
 
+    public string VehiclesYear { get; set; }
+
     public virtual Driver DriversLicenseNumberNavigation { get; set; }
 
     public virtual Vehicle LicensePlateNumberNavigation { get; set; }

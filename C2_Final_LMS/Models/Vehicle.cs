@@ -11,5 +11,11 @@ public partial class Vehicle
 
     public string VehiclesName { get; set; }
 
+    public string Vehiclescolor { get; set; }
+
+    public string Vehiclesmodal { get; set; }
+
+    public string VehiclesYear { get; set; }
+
     public virtual ICollection<Infraction> Infractions { get; set; } = new List<Infraction>();
 }
