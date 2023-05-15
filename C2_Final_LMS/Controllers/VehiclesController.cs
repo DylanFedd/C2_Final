@@ -13,7 +13,7 @@ namespace C2_Final.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "dmv")]
+    [Authorize(Roles = "dmv,law")]
     public class VehiclesController : ControllerBase
     {
         private readonly C2_FinalContext _context;
